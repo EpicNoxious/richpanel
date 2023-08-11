@@ -62,7 +62,7 @@ def paymentView(request):
   
   if request.method == 'POST':
     intent_id = intent.get('id')
-    time.sleep(10)
+    time.sleep(5)
     return redirect('success', intent_id=intent_id, month_year=month_year, plan_name=plan_name, price=price, s=s, e=e)
   
   return render(request, 'payment.html', context)
