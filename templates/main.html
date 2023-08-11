@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Main</title>
+
+    <!-- swup.js -->
+    <script src="https://unpkg.com/swup@3"></script>
+    <script src="https://unpkg.com/@swup/forms-plugin@2"></script>
+    <script src="https://unpkg.com/@swup/js-plugin@2"></script>
+    <script src="https://unpkg.com/@swup/preload-plugin@2"></script>
+    <script src="https://unpkg.com/@swup/debug-plugin@3"></script>
+
+    <!-- stripe -->
+    <script src="https://js.stripe.com/v3/"></script>
+    <!-- favicon -->
+    <link rel="icon" href="{% static 'public/favicon.ico' %}" />
+
+    <!-- lenis -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <link rel="stylesheet" href="../static/css/styles.css" />
+  </head>
+
+  <body>
+    <main>
+      {% include 'header.html' %}
+      <!--content of a web page-->
+      {% if messages %} {% for message in messages %}
+      <div class="alert alert--{{ message.tags }}">
+        <p class="alert_message">{{ message }}</p>
+      </div>
+      {% endfor %} {% endif %} {%block content %}
+      <!--  -->
+      {% endblock content %}
+
+      <!--footer-->
+    </main>
+    {% include 'footer.html' %}
+  </body>
+</html>

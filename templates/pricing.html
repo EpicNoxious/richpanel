@@ -1,0 +1,78 @@
+{% extends 'main.html' %} {% load static %} {% block content %}
+<!-- -->
+<section class="pricing">
+  <form class="pricing-form" method="post">
+    {% csrf_token %}
+    <div class="form--field toggle-switch">
+      <div class="form--field-embed">
+        <input
+          class="mon_yr-check"
+          type="checkbox"
+          name="month_year"
+          id="id_month_year"
+          checked=""
+        />
+        Monthly (Tick) / Yearly (Untick)
+      </div>
+    </div>
+
+    <div class="form--field pricing-plan">
+      <div class="form--field-embed">
+        <div id="id_plan_name">
+          <div>
+            <label for="id_plan_name_0"
+              ><input
+                type="radio"
+                name="plan_name"
+                value="mobile"
+                required=""
+                id="id_plan_name_0"
+              />
+            </label>
+            Mobile
+          </div>
+          <div>
+            <label for="id_plan_name_1"
+              ><input
+                type="radio"
+                name="plan_name"
+                value="basic"
+                required=""
+                id="id_plan_name_1"
+                checked=""
+              />
+            </label>
+            Basic
+          </div>
+          <div>
+            <label for="id_plan_name_2"
+              ><input
+                type="radio"
+                name="plan_name"
+                value="standard"
+                required=""
+                id="id_plan_name_2"
+              />
+            </label>
+            Standard
+          </div>
+          <div>
+            <label for="id_plan_name_3"
+              ><input
+                type="radio"
+                name="plan_name"
+                value="premium"
+                required=""
+                id="id_plan_name_3"
+              />
+            </label>
+            Premium
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="next-btn action-btn" type="submit">Submit</button>
+  </form>
+</section>
+{% endblock content %}

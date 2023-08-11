@@ -1,0 +1,406 @@
+@font-face {
+  font-family: "Uncut-B";
+  src: url("../fonts/Uncut-Sans-Semibold.otf");
+}
+@font-face {
+  font-family: "uncut-M";
+  src: url("../fonts/Uncut-Sans-Medium.otf");
+}
+@font-face {
+  font-family: "Uncut-R";
+  src: url("../fonts/Uncut-Sans-Regular.otf");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  background-color: #1e4c91;
+  overflow: hidden;
+}
+
+main {
+  position: relative;
+}
+
+section {
+  height: 100vh;
+  width: 100vw;
+}
+
+.alert {
+  position: fixed;
+  bottom: 0vh;
+  left: 0%;
+  right: 0%;
+  color: white;
+  height: 8vh;
+  width: 100vw;
+  display: block;
+}
+.alert_message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 8vw;
+  font-family: "Uncut-B";
+  text-transform: capitalize;
+}
+
+h3 {
+  font-size: 1.6vw;
+  font-family: "Uncut-M";
+  font-weight: 1000;
+  text-transform: capitalize;
+}
+
+h4 {
+  font-size: 1.4vw;
+  font-family: "Uncut-R";
+  font-weight: 100;
+  text-transform: capitalize;
+}
+
+p {
+  font-family: "Uncut-R";
+  font-weight: 100;
+}
+
+.index {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5vw;
+}
+
+.heading {
+  color: white;
+  margin-right: auto;
+}
+
+.signupin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.forms {
+  background-color: white;
+  height: 65vh;
+  width: 25vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2vw;
+  padding: 2vw;
+  border-radius: 9px;
+  outline: 0;
+  border: 0;
+}
+.forms h3 {
+  margin-bottom: auto;
+}
+.forms form {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2vh;
+}
+
+.form--field-embed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.form--label {
+  width: 100%;
+  font-weight: 100;
+  font-family: "Uncut-R";
+  font-size: 1vw;
+}
+
+.action-btn {
+  border: 1px solid black;
+  height: 5vh;
+  outline: 0;
+  margin-top: 1vh;
+  background-color: #1e4c91;
+  color: white;
+  border-radius: 5px;
+  font-weight: 100;
+  font-family: "Uncut-R";
+  font-size: 1vw;
+}
+
+input[type=text],
+input[type=password],
+input[type=email] {
+  width: 100%;
+  outline: 0;
+  border: 1px solid black;
+  height: 5vh;
+  border-radius: 5px;
+  padding: 0.4vw 0.6vw;
+}
+
+.checkbox-rem {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5vw;
+  font-weight: 100;
+  font-family: "Uncut-R";
+  font-size: 1vw;
+}
+
+.form--switch {
+  margin: 0 auto;
+  font-weight: 100;
+  font-family: "Uncut-R";
+  font-size: 1vw;
+}
+.form--switch a {
+  color: #1e4c91;
+  text-decoration: none;
+}
+.form--switch a:hover {
+  text-decoration: underline;
+}
+
+.pricing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pricing-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60vw;
+  flex-wrap: wrap;
+  height: 60vh;
+  padding: 2vw;
+  background-color: white;
+  border-radius: 9px;
+}
+
+.toggle-switch {
+  width: 30%;
+}
+
+.pricing-plan {
+  width: 70%;
+}
+
+.next-btn {
+  width: 100%;
+  margin-top: 5vw;
+}
+
+#id_plan_name {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+input[type=radio] {
+  height: 5vw;
+  width: 5vw;
+}
+
+.mon_yr-check {
+  height: 5vw;
+  width: 5vw;
+}
+
+.payment {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  height: 30vh;
+  width: 60vw;
+  border: 0;
+  outline: 0;
+  border-radius: 9px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .left-container {
+  width: 60%;
+  padding: 2vw;
+  height: 100%;
+}
+.container .left-container p {
+  margin-bottom: 1vw;
+}
+.container .right-container {
+  width: 40%;
+  background-color: #f5f5f7;
+  height: 100%;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2vw;
+}
+.container .right-container h3 {
+  padding-bottom: 2vw;
+  margin-right: auto;
+}
+
+#card-element {
+  border: 1px solid black;
+  height: 5vh;
+  padding: 1vh;
+  border-radius: 5px;
+}
+
+#card-button {
+  border: 0;
+  outline: 0;
+  padding: 0 2vw;
+  margin-top: 1vw;
+}
+
+.plan-name,
+.billing-cycle,
+.plan-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.plan-name span,
+.billing-cycle span,
+.plan-price span {
+  font-family: "Uncut-R";
+  font-weight: 100;
+  text-transform: capitalize;
+}
+
+.plan-price {
+  margin-bottom: 2vw;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10vh;
+  width: 100%;
+}
+nav .nav-div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  gap: 2vw;
+  padding: 0 5vw;
+}
+
+.hover-anchor {
+  color: white;
+  text-decoration: none;
+}
+.hover-anchor:hover {
+  text-decoration: underline;
+}
+
+.success {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.success-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.success-head div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+}
+.success-head div span {
+  background-color: rgba(30, 76, 145, 0.2);
+  color: rgb(30, 76, 145);
+  font-family: "Uncut-R";
+  font-weight: 1000;
+  padding: 0.1vw;
+  font-size: 0.8vw;
+}
+.success-container {
+  background-color: white;
+  height: 40vh;
+  width: 40vw;
+  border-radius: 9px;
+  padding: 2vw;
+}
+.success-container .plan-name {
+  font-size: 1.2vw !important;
+  font-weight: 1000;
+  text-transform: capitalize;
+  margin-top: 1vw;
+}
+.success-container .plan-price {
+  font-size: 2.4vw !important;
+  font-weight: 1000;
+  font-family: "Uncut-B" !important;
+  text-transform: capitalize;
+}
+
+.cancel-btn {
+  font-family: "Uncut-R";
+  font-weight: 100;
+  padding: 0.1vw;
+  font-size: 0.8vw;
+  background-color: transparent;
+  cursor: pointer;
+  color: red;
+  height: 100%;
+  margin: 0 !important;
+}
+
+.choose-plan {
+  font-family: "Uncut-R";
+  font-weight: 1000;
+  color: rgb(30, 76, 145);
+  text-decoration: none;
+  border: 1px solid rgb(30, 76, 145);
+  border-radius: 5px;
+  padding: 1vw 1.6vw;
+}
+
+.sub-notice {
+  margin-top: 2vw;
+}
+
+/*# sourceMappingURL=styles.css.map */

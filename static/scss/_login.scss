@@ -1,0 +1,92 @@
+.signupin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.forms {
+  background-color: white;
+  height: 65vh;
+  width: 25vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2vw;
+  padding: 2vw;
+  border-radius: 9px;
+  outline: 0;
+  border: 0;
+  h3 {
+    margin-bottom: auto;
+  }
+  form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2vh;
+  }
+}
+.form--field {
+  &-embed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
+
+.form--label {
+  width: 100%;
+  font-weight: 100;
+  font-family: "Uncut-R";
+  font-size: 1vw;
+}
+
+.action-btn {
+  border: 1px solid black;
+  height: 5vh;
+  outline: 0;
+  margin-top: 1vh;
+  background-color: #1e4c91;
+  color: white;
+  border-radius: 5px;
+  font-weight: 100;
+  font-family: "Uncut-R";
+  font-size: 1vw;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 100%;
+  outline: 0;
+  border: 1px solid black;
+  height: 5vh;
+  border-radius: 5px;
+  padding: 0.4vw 0.6vw;
+}
+.checkbox-rem {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5vw;
+  font-weight: 100;
+  font-family: "Uncut-R";
+  font-size: 1vw;
+}
+.form--switch {
+  margin: 0 auto;
+  font-weight: 100;
+  font-family: "Uncut-R";
+  font-size: 1vw;
+  a {
+    color: #1e4c91;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{% extends 'main.html' %} {% load static %} {% block content %}
+<!-- -->
+<section class="success">
+  <div class="success-container">
+    <div class="success-head">
+      <div>
+        <h3>Current Plan Details</h3>
+        <span>Active</span>
+      </div>
+      <form method="POST">
+        {% csrf_token %}
+        <button class="cancel-btn" id="card-button">Cancel</button>
+      </form>
+    </div>
+    <p class="plan-name">{{plan_name}}</p>
+    <p class="plan-price">
+      {{price}}/{% if month_year %} Month {% else %} Year {% endif %}
+    </p>
+    <a class="choose-plan" href="{% url 'payment' %}">Choose Plan</a>
+    <p class="sub-notice">
+      Your Subscription has started on {{s}}. and will renew on {{e}}.
+    </p>
+  </div>
+</section>
+{% endblock content %}

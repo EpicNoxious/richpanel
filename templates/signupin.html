@@ -1,0 +1,75 @@
+{% extends 'main.html' %}
+<!--  -->
+{% block title %} {{ page }} {% endblock %}
+<!--  -->
+{% block content %}
+
+<section class="signupin">
+  <div class="signupin-container">
+    <!-- Sign Up Form -->
+
+    <div class="forms">
+      {% if page == 'register' %}
+      <h3>Create account</h3>
+      <form method="POST" class="form" autocomplete="off" data-swup-form>
+        {% csrf_token %}
+        <!--  -->
+        {% for field in form %}
+        <div class="form--field">
+          <div class="form--field-embed">
+            <label class="form--label">{{field.label}}</label>
+            {{field}}
+          </div>
+        </div>
+        {% for error in field.errors %}
+        <span style="color: red" class="field--errors">{{error}}</span>
+        {% endfor %} {% endfor %}
+
+        <button class="action-btn" type="submit">Register</button>
+        <div class="form--switch">
+          Already have an account? <a href="{% url 'login' %}">Sign In</a>
+        </div>
+      </form>
+
+      {% else %}
+      <!-- Sign In Form -->
+      <h3>Login to your account</h3>
+      <form
+        method="POST"
+        class="form"
+        id="login"
+        autocompletete="off"
+        data-swup-form
+      >
+        {% csrf_token %} {% for field in form %}
+        <div class="form--field">
+          <div class="form--field-embed">
+            <label class="form--label">{{field.label}}</label>
+            {{field}}
+          </div>
+        </div>
+        {% for error in field.errors %}
+        <span style="color: red" class="field--errors">{{error}}</span>
+        {% endfor %} {% endfor %}
+        <!--  -->
+        <div class="checkbox-rem">
+          <input
+            class="checkbox-remember"
+            type="checkbox"
+            name="Remember me"
+            id=""
+          />Remember Me
+        </div>
+
+        <button class="action-btn" type="submit">Login</button>
+        <div class="form--switch">
+          Don't have an account? <a href="{% url 'register' %}">Sign Up</a>
+        </div>
+      </form>
+
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% endblock content %}

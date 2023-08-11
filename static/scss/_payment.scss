@@ -1,0 +1,71 @@
+.payment {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  height: 30vh;
+  width: 60vw;
+  border: 0;
+  outline: 0;
+  border-radius: 9px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .left-container {
+    width: 60%;
+    padding: 2vw;
+    height: 100%;
+    p {
+      margin-bottom: 1vw;
+    }
+  }
+  .right-container {
+    width: 40%;
+    background-color: #f5f5f7;
+    height: 100%;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2vw;
+    h3 {
+      padding-bottom: 2vw;
+      margin-right: auto;
+    }
+  }
+}
+#card-element {
+  border: 1px solid black;
+  height: 5vh;
+  padding: 1vh;
+  border-radius: 5px;
+}
+
+#card-button {
+  border: 0;
+  outline: 0;
+  padding: 0 2vw;
+  margin-top: 1vw;
+}
+
+.plan-name,
+.billing-cycle,
+.plan-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  span {
+    font-family: "Uncut-R";
+    font-weight: 100;
+    text-transform: capitalize;
+  }
+}
+.plan-price {
+  margin-bottom: 2vw;
+}

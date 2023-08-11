@@ -1,0 +1,18 @@
+{
+  "name": "richpanel",
+  "version": "1.0.0",
+  "description": "assignment for rich_panel",
+  "main": "index.js",
+  "scripts": {
+    "start:scss": "sass static/scss/main.scss static/css/styles.css -w",
+    "livereload": "python manage.py livereload",
+    "runserver": "python manage.py runserver",
+    "develop": "concurrently \"npm run start:scss\" \"npm run livereload\" \"npm run runserver\" "
+  },
+  "author": "Jappreet Singh",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.0",
+    "sass": "^1.64.2"
+  }
+}

@@ -1,0 +1,69 @@
+.success {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &-head {
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1vw;
+      span {
+        background-color: rgba(30, 76, 145, 0.2);
+        color: rgba(30, 76, 145, 1);
+        font-family: "Uncut-R";
+        font-weight: 1000;
+        padding: 0.1vw;
+        font-size: 0.8vw;
+      }
+    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-container {
+    background-color: white;
+    height: 40vh;
+    width: 40vw;
+    border-radius: 9px;
+    padding: 2vw;
+    .plan-name {
+      font-size: 1.2vw !important;
+      font-weight: 1000;
+      text-transform: capitalize;
+      margin-top: 1vw;
+    }
+    .plan-price {
+      font-size: 2.4vw !important;
+      font-weight: 1000;
+      font-family: "Uncut-B" !important;
+      text-transform: capitalize;
+    }
+  }
+}
+.cancel-btn {
+  font-family: "Uncut-R";
+  font-weight: 100;
+  padding: 0.1vw;
+  font-size: 0.8vw;
+  background-color: transparent;
+  cursor: pointer;
+  color: red;
+  height: 100%;
+  margin: 0 !important;
+}
+
+.choose-plan {
+  font-family: "Uncut-R";
+  font-weight: 1000;
+  color: rgba(30, 76, 145, 1);
+  text-decoration: none;
+  border: 1px solid rgba(30, 76, 145, 1);
+  border-radius: 5px;
+  padding: 1vw 1.6vw;
+}
+.sub-notice {
+  margin-top: 2vw;
+}
